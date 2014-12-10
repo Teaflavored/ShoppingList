@@ -10,6 +10,9 @@ app.config(function($routeProvider){
       templateUrl: "main.html",
       controller: "MainController"
     })
+    .when("/auster",{
+      templateUrl: "auster.html",
+    })
 })
 
 app.factory("List", ["$resource", function($resource){
