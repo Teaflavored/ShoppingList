@@ -13,11 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
+//= require angular-route
 //= require angular-rails-templates
 
 //= require shopping_list/app
 
-//= require_tree ./shopping_list/templates
+//= require_tree ../templates
 //= require_tree ./shopping_list/modules
 //= require_tree ./shopping_list/filters
 //= require_tree ./shopping_list/directives

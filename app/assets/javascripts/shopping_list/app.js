@@ -1,16 +1,20 @@
 var app = angular.module("shoppingList", [
+  "ngResource",
+  "ngRoute",
   "templates"
 ])
+
 app.config(function($routeProvider){
   $routeProvider
     .when("/", {
-      templateUrl: "templates/main.html",
+      templateUrl: "main.html",
       controller: "MainController"
     })
 })
 
 app.factory("List", ["$resource", function($resource){
   return $resource("/api/lists/:id", null, {
-    "update": { method: "PUT" }
+    "update": { method: "PUT" },
+    "show": { method: "GET" }
   })
 }])
